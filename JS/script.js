@@ -48,3 +48,71 @@ function questgiver() {
       document.getElementById("text").innerHTML = "Your not? Well then you are no use to me!";
     alert("You lost! Don't be afraid to be adventurous!"); }
   } 
+
+//Class used for battle skills
+
+class skills {
+  constructor (name, type, hit=0, power=0){
+    this.name = name;
+    this.type = type;
+    this.hit = hit;
+    this.power = power;
+  }
+};
+
+//class used for battle characters
+class actor {
+  constructor(name, max_hp=0, skill=[]){
+      this.name = name;
+      this.max_hp = max_hp;
+      this.hp = hp;
+      this.skills = skills;
+  }
+};
+
+//define skills
+
+var testAttack = new skills ("Attack", "attack", 90, 100);
+
+//define actors
+
+var hero = new actor ("Hero", 30, [testAttack]);
+var grue = new actor ("Grue", 10, [testAttack]);
+
+// var player = var
+function battle(player, enemy){
+
+//To start battling, call this label with 2 actor objects: player and enemy.
+// Preparation
+//Copying enemy object prevents modifying an original data.
+
+  var player = copy(player)
+  var enemy=copy(enemy);
+  alert("[enemy.name] appeared");
+
+    if (player.hp <= 0){
+      alert ("You drop to your knees, unable to continue.");
+      function lose();}
+    
+      else if (enemy.hp <= 0){
+        alert ("The enemy staggers back");
+        function win();}
+        
+        else{
+          function _battle();
+        }
+ }
+
+ function lose(){
+   console.log ("win");
+ }
+
+ function win(){
+   console.log ("lose");
+ }
+
+ function _battle(){
+  while True:
+  player.skill = player.skill
+  $ enemy.skill = random.choice(enemy.skills)
+ }
